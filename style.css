@@ -200,18 +200,21 @@ header {
   font-family: "Segoe UI";
 }
 
-.portfolio {
+.portfolio-header {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 270px;
-      grid-template-columns: 1fr 1fr 1fr 270px;
-      grid-template-areas: "portfolio_t portfolio_t portfolio_h portfolio_h";
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "portfolio_t portfolio_h portfolio_h portfolio_h";
   -ms-grid-rows: 150px;
       grid-template-rows: 150px;
   grid-gap: 30px 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .portfolio--title {
@@ -219,20 +222,19 @@ header {
   color: #515f67;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: portfolio_t;
 }
 
 .portfolio__header-nav {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
   grid-area: portfolio_h;
   -ms-grid-column-align: right;
       justify-self: right;
 }
 
-.portfolio__header-nav a {
+.portfolio__header-nav button {
   margin-right: 5px;
   color: white;
   text-transform: uppercase;
@@ -244,13 +246,14 @@ header {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #515f67;
+  background-color: white;
 }
 
-.portfolio__header-nav a:last-child {
+.portfolio__header-nav button:last-child {
   margin-right: 0;
 }
 
-.portfolio__header-nav a:hover {
+.portfolio__header-nav button:hover {
   color: #4bcaff;
   border: 2px solid #4bcaff;
 }
@@ -264,6 +267,7 @@ header {
   position: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  margin-bottom: 20px;
 }
 
 .portfolio__item-plus-icon {
@@ -283,6 +287,21 @@ header {
 
 .portfolio__item:hover .portfolio__item-plus-icon {
   display: block;
+}
+
+.portfolio__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.portfolio__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px 0;
 }
 
 .just-default-section {

@@ -187,13 +187,14 @@ header {
 
 // PORTFOLIO SECTION
 
-.portfolio {
+.portfolio-header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 270px;
-  grid-template-areas: "portfolio_t portfolio_t portfolio_h portfolio_h";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "portfolio_t portfolio_h portfolio_h portfolio_h";
   grid-template-rows: 150px;
   grid-gap: 30px 15px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .portfolio--title {
@@ -205,14 +206,15 @@ header {
 .portfolio__header-nav {
   grid-area: portfolio_h;
   justify-self: right;
-  a {
+  button {
     @include navView();
     color: #515f67;
+    background-color: white;
   }
-  a:last-child {
+  button:last-child {
     margin-right: 0;
   }
-  a:hover {
+  button:hover {
     color: #4bcaff;
     border: 2px solid #4bcaff;
   }
@@ -226,6 +228,7 @@ header {
 .portfolio__item {
   position: relative;
   transition: 0.5s;
+  margin-bottom: 20px;
 }
 
 .portfolio__item-plus-icon {
@@ -245,6 +248,17 @@ header {
 
 .portfolio__item:hover .portfolio__item-plus-icon {
   display: block;
+}
+
+.portfolio__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.portfolio__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px 0;
 }
 
 // DEFAULT SECTION

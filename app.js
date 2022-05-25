@@ -27,3 +27,19 @@ const swiper = new Swiper('.swiper', {
     
   });
   
+
+  // SORT ITEMS
+
+
+// init Isotope
+var $grid = $('.portfolio__items').isotope({
+  // options
+  masonry: {
+    gutter: 20
+  }
+});
+// filter items on button click
+$('.filter-button-group').on( 'click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  $grid.isotope({ filter: filterValue });
+});
